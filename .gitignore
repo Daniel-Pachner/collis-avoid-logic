@@ -1,0 +1,19 @@
+# List of untracked files to ignore
+plcsrc
+
+# vim files
+**/*.*~
+**/*.swp
+
+# backup files
+**/*.bak
+**/*.notes
+
+# structures
+**/*.struct
+
+# figures
+**/*.svg
+
+# data logs
+**/*.csv

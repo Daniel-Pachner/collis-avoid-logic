@@ -1,0 +1,6 @@
+function pwp = pwp(p, t, t0)
+    n = length(t);
+    pwp = struct('c', {p.c}, ...
+    't1', num2cell(t(1:n-1)), 't2', num2cell(t(2:n)), ...
+    't0', num2cell(t0)); 
+end
