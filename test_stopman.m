@@ -2,7 +2,7 @@ t = [1, 2, 2, 2, 1];
 
 v0 = 10;
 a0 = 0;
-t0 = 0;
+t0 = 1.5;
 jM = -1.5;
 aM = -2.0;
 
@@ -34,6 +34,5 @@ hxd = pwpplot(gca, d, 'g', 'displayname', 'relative');
 hxwc = plot([t, t], [y, 0], 'r-o', 'displayname', 'close');
 legend([hx, hxo, hxd, hxwc]);
 
-fprintf('min rel distance = %0.4g m at %0.4g s\n', -y, t)
-
-[t, v, s] = collisiontest(t0, v0, a0, jM, aM, t1, s1, t2, s2)
+fprintf('min rel distance = %0.4g m at %0.4g s\n', -y, t);
+[t, v, s] = collisiontest(t0, v0, a0, jM, aM, t1, s1, t2, s2);
