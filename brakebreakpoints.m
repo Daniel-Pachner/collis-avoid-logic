@@ -1,12 +1,16 @@
 function t = brakebreakpoints(t0, v0, a0, jM, aM, T)
-    t = brakebreakpoints3(v0 + a0*t0, a0, jM, aM);
-    t4 = max(2.0, T - sum(t) - t0);
-    t = [t0, t, t4];
+    if a0 < 0 && -v0/a0 <= t0
+        t1 = -v0/a0;
+        t = [t1, 0, 0, 0, max(2.0, T-t1)];
+    else
+        t = brakebreakpoints3(v0 + a0*t0, a0, jM, aM);
+        t = [t0, t, max(2.0, T - sum(t) - t0)];
+    end
 end
 
 
 function t = brakebreakpoints3(v0, a0, jM, aM)
-    
+
     function t = stopmaneuver3(v0, a0, jM, aM)
         t1 = (aM - a0) / jM;
         t3 = aM / jM;
@@ -15,7 +19,7 @@ function t = brakebreakpoints3(v0, a0, jM, aM)
         t2 = (v2 - v1) / aM;
         t = [t1, t2, t3];
     end
-    
+
     if v0 <= 0.0
         t = [0.0, 0.0, 0.0];
     else

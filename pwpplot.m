@@ -1,7 +1,12 @@
 function hx = pwpplot(ax, p, varargin)
     [t, y] = pwpdomain(p, 50);
     [to, yo] = pwpdomain(p, 0);
-    h = plot(ax, to, yo, varargin{:}, t, y, varargin{:});
+    try
+        h = plot(ax, to, yo, varargin{:}, t, y, varargin{:});
+    catch
+        disp('plot error')
+    end
+
     if numel(h) > 1
         cl = get(h(2), 'color');
         set(h(1), 'linestyle', 'none', 'marker', 'o', 'markersize', 3, ...

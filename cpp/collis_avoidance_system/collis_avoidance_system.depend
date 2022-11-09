@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1653402849 source:c:\repo\collis-avoid-logic\cpp\collis_avoidance_system\cas.cpp
+	"cas.h"
+
+1653464903 c:\repo\collis-avoid-logic\cpp\collis_avoidance_system\poly.h
+	<iostream>
+	<math.h>
+	<float.h>
+	"poly.h"
+
+1653410174 source:c:\repo\collis-avoid-logic\cpp\collis_avoidance_system\main.cpp
+	<iostream>
+	"cas_manual_tests.h"
+	"cas_auto_tests.h"
+
+1653403924 c:\repo\collis-avoid-logic\cpp\collis_avoidance_system\cas_manual_tests.h
+	"cas.h"
+
+1653464814 c:\repo\collis-avoid-logic\cpp\collis_avoidance_system\cas.h
+	"poly.h"
+
+1653464808 source:c:\repo\collis-avoid-logic\cpp\collis_avoidance_system\poly.cpp
+	"poly.h"
+
+1653404699 source:c:\repo\collis-avoid-logic\cpp\collis_avoidance_system\cas_manual_tests.cpp
+	"cas_manual_tests.h"
+
+1653410020 c:\repo\collis-avoid-logic\cpp\collis_avoidance_system\cas_auto_tests.h
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	<vector>
+	"cas.h"
+
+1653410171 source:c:\repo\collis-avoid-logic\cpp\collis_avoidance_system\cas_auto_tests.cpp
+	"cas_auto_tests.h"
+

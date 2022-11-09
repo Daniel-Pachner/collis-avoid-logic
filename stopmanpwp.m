@@ -11,6 +11,12 @@ function pr = stopmanpwp(t, v0, a0, jM, aM, D)
         a(i+1) = polyval(polynomial([a(i), j(i)]), t(i));
         v(i+1) = polyval(polynomial([v(i), a(i), j(i)/2.0]), t(i));
         s(i+1) = polyval(polynomial([s(i), v(i), a(i)/2.0, j(i)/6.0]), t(i));
+        if v(i+1) <= 0.01
+            a(i+1) = 0;
+            v(i+1) = 0;
+            j(i+1) = 0;
+        end
+        
     end
     c = zeros(n, 4);
     for k = 1 : n
